@@ -35,14 +35,14 @@ I employed the use of a simple `ensemble` method of `ExtraTreesRegressor` of 65 
 * `min_samples_split=5` 
 
 The data features with variance value lower than `0.9` were removed. That is,
-$$ var_{x} = (1-x)\times{x}$$
-$$ x = threshold = 0.9$$
+var_{x} = (1-x)\times{x}<br>
+x = threshold = 0.9<br>
 The numeric values were scaled using the `z-score` normaization and the categorical features were `one-hot`encoded. Feature engineering technique was also employed.
 
 ## Model Result
 <img src='./model.png'>
 
-A training mean-squared-error of $\approx32341$ was attained. While the test MAE is $\approx32543$. This high error is due to the untreated outlier values that the model was fitted on. 
+A training mean-squared-error of `32341` was attained. While the test MAE is `32543`. This high error is due to the untreated outlier values that the model was fitted on. 
 
 ## Suggestion
 This code is in no way the best approach. However, these are my suggestions:
